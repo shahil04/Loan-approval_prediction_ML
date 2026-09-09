@@ -38,8 +38,7 @@ if st.button("Predict Loan Status"):
     categorical_columns = ["Gender", "Married", "Dependents", "Education",
                            "Self_Employed", "Property_Area"]
     data[categorical_columns] = data[categorical_columns].apply(
-        lambda column: column.str.strip().str.lower()
-    )
+        lambda column: column.str.strip().str.lower())
 
     # Prediction
     result = model.predict(data)
